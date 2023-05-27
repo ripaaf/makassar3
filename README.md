@@ -12,6 +12,10 @@ then in the terminal run ```flutter run``` to start debungging the app
 
 ***note : use emulator or a real phone to run the application***
 
+# the ***php handle*** files
+
+this files is for app function like login, register, etc
+
 ## Simple introduction
 
 This application is useful for people who want to report incidents that occur in the field such as damage, personnel shortages, accidents that occur, and others. this app was made by 3 people.
