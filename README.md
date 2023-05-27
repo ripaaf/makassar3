@@ -4,7 +4,7 @@ A itsla maintenance application.
 
 ## Getting Started
 
-clone this repo
+clone this repo ```git clone https://github.com/rifaaa12/makassar3.git```
 
 run ```flutter pub get``` to get the depencies
 
