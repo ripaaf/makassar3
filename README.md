@@ -10,7 +10,7 @@ run ```flutter pub get``` to get the depencies
 
 then in the terminal run ```flutter run``` to start debungging the app
 
-***note : use emulator or a real phone to run the application***
+***note : use emulator or a real phone to run the application, then the app package cannot be uploaded the files is to big..***
 
 # the ***php handle*** files
 
