@@ -1,16 +1,26 @@
 # itsla_maintenance
 
-A new Flutter project.
+A itsla maintenance application.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+clone this repo
 
-A few resources to get you started if this is your first Flutter project:
+run flutter pub get to get the depencies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+then run flutter run to start debungging the app
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+note : use emulator or a real phone to run the application
+
+### Simple introduction
+
+This application is useful for people who want to report incidents that occur in the field such as damage, personnel shortages, accidents that occur, and others. this app was made by 3 people.
+
+This application is still in the development stage, there are still a lot of bugs and the existing design is also made sober. so dont expect to much for this young kids make a big app that the quality is the same level as company's app. we're just field practice in this company, the app itself i think from scale 1 to 10 it's around 6 or 5.5 . i do judge my own code:) . 
+
+
+#### What this app do?
+
+the app itself is a report based application. This application is able to report incidents that occur and save these reports for other technicians to work on. 
+
+
