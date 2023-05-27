@@ -6,11 +6,11 @@ A itsla maintenance application.
 
 clone this repo
 
-run flutter pub get to get the depencies
+run 'flutter pub get' to get the depencies
 
-then run flutter run to start debungging the app
+then in the terminal run 'flutter run' to start debungging the app
 
-note : use emulator or a real phone to run the application
+***note : use emulator or a real phone to run the application***
 
 ## Simple introduction
 
