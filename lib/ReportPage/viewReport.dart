@@ -12,12 +12,12 @@ class viewReport extends StatefulWidget {
 }
 
 class viewReportState extends State<viewReport> {
+  bool visible = false;
   List<Map<String, dynamic>> reportData = [];
   List<Map<String, dynamic>> filteredData = [];
   String email = '';
   String username = '';
   String teknisi = '';
-
   String searchQuery = '';
 
   final TextEditingController _lokasiController = TextEditingController();
@@ -34,6 +34,19 @@ class viewReportState extends State<viewReport> {
     fetchReportData();
   }
 
+  Future<void> refreshData() async {
+    setState(() {
+      visible = true;
+    });
+
+    await retrieveData();
+    await fetchReportData();
+
+    setState(() {
+      visible = false;
+    });
+  }
+
   retrieveData() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     String savedEmail = sharedPreferences.getString('email') ?? '';
@@ -44,13 +57,12 @@ class viewReportState extends State<viewReport> {
       username = savedusername;
       email = savedEmail;
       teknisi = savedteknisi;
-      _emailController.text = email;
+      _emailController.text = savedEmail;
     });
   }
 
   Future<void> fetchReportData() async {
-    var url =
-        'http://0.tcp.ap.ngrok.io:16457/itsla_maintenance/fetch_report.php';
+    var url = 'http://0.tcp.ap.ngrok.io:16457/itsla_maintenance/fetch_report.php';
 
     var response = await http.get(Uri.parse(url));
 
@@ -87,6 +99,19 @@ class viewReportState extends State<viewReport> {
       request.files.add(imageField);
     }
 
+    //   print('Request URL: ${request.url}');
+    // print('Request Method: ${request.method}');
+    // print('Request Fields:');
+    // request.fields.forEach((key, value) {
+    //   print('$key: $value');
+    // });
+    // print('Request Files:');
+    // request.files.forEach((file) {
+    //   print('Field Name: ${file.field}');
+    //   print('File Name: ${file.filename}');
+    //   print('File Length: ${file.length}');
+    // });
+
     var response = await request.send();
 
     if (response.statusCode == 200) {
@@ -95,7 +120,7 @@ class viewReportState extends State<viewReport> {
       if (result['status'] == 'success') {
         // Report inserted successfully
         // Refresh report data to display the new report
-        fetchReportData();
+        refreshData();
         return true; // Return true indicating success
       } else {
         // Error occurred while inserting the report
@@ -220,7 +245,7 @@ class viewReportState extends State<viewReport> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: RefreshIndicator(
-        onRefresh: fetchReportData,
+        onRefresh: refreshData,
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(16.0),
@@ -244,6 +269,15 @@ class viewReportState extends State<viewReport> {
                   },
                   decoration: InputDecoration(
                     labelText: 'Search',
+                  ),
+                ),
+                Center(
+                  child: Visibility(
+                    visible: visible,
+                    child: Container(
+                      margin: EdgeInsets.only(bottom: 30),
+                      child: CircularProgressIndicator(),
+                    ),
                   ),
                 ),
                 SizedBox(height: 10),
@@ -356,7 +390,7 @@ class viewReportState extends State<viewReport> {
                         ),
                       ),
                       TextField(
-                        controller: _emailController ,
+                        controller: _emailController,
                         enabled: false,
                         decoration: InputDecoration(
                           labelText: 'reported by',
