@@ -10,7 +10,7 @@ cd to directory ```cd makassar3```
 
 run ```flutter pub get``` to get the depencies
 
-***you can downgrade the flutter sdk to your sdk to run the 'flutter pub get' ***
+_you can downgrade the flutter sdk to your sdk to run the 'flutter pub get'_
 
 
 then in the terminal run ```flutter run``` to start debungging the app
