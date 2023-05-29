@@ -9,7 +9,7 @@ clone this repo on cmd ```git clone https://github.com/rifaaa12/makassar3.git```
 cd to directory ```cd makassar3``` 
 
 run ```flutter pub get``` to get the depencies
-  ***you can downgrade the flutter sdk to your sdk to run the 'flutter pub get' ***
+***you can downgrade the flutter sdk to your sdk to run the 'flutter pub get' ***
 
 then in the terminal run ```flutter run``` to start debungging the app
 
