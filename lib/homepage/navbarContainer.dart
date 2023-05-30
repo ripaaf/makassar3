@@ -5,6 +5,10 @@ import 'Profile.dart';
 import 'RiwayatPage.dart';
 
 class BottomNavbarContainer extends StatefulWidget {
+    final int currentIndex;
+
+  BottomNavbarContainer({required this.currentIndex});
+
   @override
   BottomNavbarContainerState createState() => BottomNavbarContainerState();
 }

@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:itsla_maintenance/ReportPage/Report.dart';
-import 'package:itsla_maintenance/ReportPage/viewReport.dart';
+import 'package:itsla_maintenance/ReportPage/ReportList.dart';
+import 'package:itsla_maintenance/ReportPage/viewreworp.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 import '../login.dart';
@@ -38,6 +38,7 @@ class HomeState extends State<Home> {
 
     await retrieveData();
     await TeknisiStatus();
+    getTeknisiStatus(teknisi);
 
     setState(() {
       visible = false;
@@ -54,6 +55,17 @@ class HomeState extends State<Home> {
       context,
       MaterialPageRoute(builder: (context) => LoginPage()),
     );
+  }
+
+  Color getTeknisiStatus(String teknisi) {
+    if (teknisi == 'true') {
+      return Color(0xff0a9830);
+    } else if (teknisi == 'false'){
+      return Color(0xffFF0000);
+    }
+    else {
+      return Color.fromARGB(0, 0, 0, 0);
+    }
   }
 
   @override
@@ -176,9 +188,7 @@ class HomeState extends State<Home> {
                                   11 * fem, 11 * fem, 11 * fem, 11 * fem),
                               width: 53 * fem,
                               decoration: BoxDecoration(
-                                color: teknisi == "true"
-                                    ? Color(0xff0a9830)
-                                    : Color(0xffFF0000),
+                                color: getTeknisiStatus(teknisi),
                                 borderRadius: BorderRadius.circular(26.5 * fem),
                               ),
                               child: Center(
@@ -254,7 +264,7 @@ class HomeState extends State<Home> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        Report()));
+                                                        ReportList()));
                                           },
                                           child: Container(
                                             // group499ge2 (101:207)

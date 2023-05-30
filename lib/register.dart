@@ -330,7 +330,7 @@ class RegisterPageState extends State<RegisterPage> {
                 top: 478 * fem,
                 child: Align(
                   child: SizedBox(
-                    width: 97 * fem,
+                    width: 117 * fem,
                     height: 30 * fem,
                     child: Text(
                       'Register',

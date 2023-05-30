@@ -55,6 +55,18 @@ class ProfileState extends State<Profile> {
     super.initState();
     retrieveData();
     refreshData();
+    getTeknisiStatus(teknisi);
+  }
+
+    Color getTeknisiStatus(String teknisi) {
+    if (teknisi == 'true') {
+      return Color(0xff0a9830);
+    } else if (teknisi == 'false'){
+      return Color(0xffFF0000);
+    }
+    else {
+      return Color.fromARGB(0, 0, 0, 0);
+    }
   }
 
   @override
@@ -103,7 +115,7 @@ class ProfileState extends State<Profile> {
                         33.62 * fem, 33.62 * fem, 33.62 * fem, 33.62 * fem),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: teknisi == "true" ? Color(0xff0a9830) : Color(0xffFF0000), // Red if "false", green otherwise
+                      color: getTeknisiStatus(teknisi),
                       borderRadius: BorderRadius.circular(81 * fem),
                     ),
                     child: Center(

@@ -317,7 +317,7 @@ class LoginPageState extends State<LoginPage> {
                 top: 508.7529296875 * fem,
                 child: Align(
                   child: SizedBox(
-                    width: 63 * fem,
+                    width: 83 * fem,
                     height: 30 * fem,
                     child: Text(
                       'Login',
@@ -523,7 +523,7 @@ class LoginPageState extends State<LoginPage> {
                 top: 674.7529296875 * fem,
                 child: Align(
                   child: SizedBox(
-                    width: 89 * fem,
+                    width: 99 * fem,
                     height: 17 * fem,
                     child: TextButton(
                       onPressed: () {

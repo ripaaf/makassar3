@@ -94,7 +94,7 @@ class ChooseStatusState extends State<ChooseStatus> {
       // Redirect to the homepage
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => BottomNavbarContainer()),
+        MaterialPageRoute(builder: (context) => BottomNavbarContainer(currentIndex: 1,)),
       );
     }
   }
