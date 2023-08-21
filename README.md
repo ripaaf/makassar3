@@ -23,7 +23,7 @@ run ```flutter pub get``` to get the depencies
 _you can downgrade the flutter sdk to your sdk to run the 'flutter pub get'_
 
 
-then in the terminal run ```flutter run``` to start debungging the app
+then in the terminal run ```flutter run``` to start debugging the app
 
 ***note : use emulator or a real phone to run the application, then the app package cannot be uploaded the files is to big..***
 
