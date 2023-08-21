@@ -19,14 +19,23 @@ clone this repo on cmd
 git clone https://github.com/rifaaa12/makassar3.git
 ```
 
-cd to directory ```cd makassar3``` 
+cd to directory 
+```sh
+cd makassar3
+``` 
 
-run ```flutter pub get``` to get the depencies
+run this to get the depencies
+```sh
+flutter pub get
+```
 
 _you can downgrade the flutter sdk to your sdk to run the 'flutter pub get'_
 
 
-then in the terminal run ```flutter run``` to start debugging the app
+then in the terminal run the flutter to start debugging the app
+```sh
+flutter run
+```
 
 ***note : use emulator or a real phone to run the application, then the app package cannot be uploaded the files is to big..***
 
