@@ -14,7 +14,10 @@ This application is still in the development stage, there are still a lot of bug
 
 ## Getting Started
 
-clone this repo on cmd ```git clone https://github.com/rifaaa12/makassar3.git```
+clone this repo on cmd 
+```sh
+git clone https://github.com/rifaaa12/makassar3.git
+```
 
 cd to directory ```cd makassar3``` 
 
